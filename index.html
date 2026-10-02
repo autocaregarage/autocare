@@ -91,26 +91,79 @@
       </div>
     </section>
 
-    <section class="contact section" id="contact">
-      <div>
-        <p class="eyebrow">GET IN TOUCH</p>
-        <h2>Ready to Book a Visit?</h2>
-        <p>Contact the shop to ask a question or request an appointment.</p>
-      </div>
-      <div class="contact-card">
-        <p><strong>Phone:</strong> <a href="tel:+639000000000">+63 900 000 0000</a> <small>(demo number—replace before publishing for a client)</small></p>
-        <p><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a> <small>(demo email—replace before publishing for a client)</small></p>
-        <p><strong>Address:</strong> Add business address here</p>
-        <a class="button" href="mailto:hello@example.com?subject=Appointment%20Request">Request an Appointment ↗</a>
-      </div>
-    </section>
-  </main>
+   
+<section class="contact section" id="contact">
+  <div>
+    <p class="eyebrow">GET IN TOUCH</p>
+    <h2>Ready to Book a Visit?</h2>
+    <p>Fill out the form to request an appointment. Our team can contact you to confirm your schedule.</p>
 
-  <footer id="footer">
-    <a class="brand" href="#home"><span class="brand-icon">⚙</span><span><strong>AUTO<span>CARE</span></strong><small>CAR REPAIR &amp; SERVICE</small></span></a>
-    <p>© <span id="year"></span> AutoCare Demo. Replace with the client’s business details.</p>
-    <a href="#home">Back to top ↑</a>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+    <div class="contact-card">
+      <p><strong>Phone:</strong> <a href="tel:+639000000000">+63 900 000 0000</a></p>
+      <p><strong>Email:</strong> <a href="mailto:hello@example.com">hello@example.com</a></p>
+      <p><strong>Address:</strong> Add business address here</p>
+    </div>
+  </div>
+
+  <div class="contact-card appointment-card">
+    <h3>Book an Appointment</h3>
+    <p>Complete the details below.</p>
+
+    <form action="https://formsubmit.co/jvboy12@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New AutoCare Appointment Request">
+      <input type="hidden" name="_template" value="table">
+
+      <label for="customer-name">Full Name *</label>
+      <input id="customer-name" type="text" name="Full Name"
+        placeholder="Enter your full name" required>
+
+      <label for="customer-phone">Phone Number *</label>
+      <input id="customer-phone" type="tel" name="Phone Number"
+        placeholder="e.g. 09123456789" required>
+
+      <label for="customer-email">Email Address *</label>
+      <input id="customer-email" type="email" name="Email"
+        placeholder="you@example.com" required>
+
+      <label for="car-model">Car Brand and Model *</label>
+      <input id="car-model" type="text" name="Car Brand and Model"
+        placeholder="e.g. Toyota Vios 2022" required>
+
+      <label for="service-type">Service Needed *</label>
+      <select id="service-type" name="Service Needed" required>
+        <option value="">Select a service</option>
+        <option>General Maintenance</option>
+        <option>Engine Diagnostics</option>
+        <option>Brake Service</option>
+        <option>Tire Services</option>
+        <option>AC & Cooling</option>
+        <option>Other</option>
+      </select>
+
+      <label for="appointment-date">Preferred Date *</label>
+      <input id="appointment-date" type="date"
+        name="Preferred Date" required>
+
+      <label for="appointment-time">Preferred Time *</label>
+      <select id="appointment-time" name="Preferred Time" required>
+        <option value="">Select a time</option>
+        <option>9:00 AM</option>
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>1:00 PM</option>
+        <option>2:00 PM</option>
+        <option>3:00 PM</option>
+        <option>4:00 PM</option>
+      </select>
+
+      <label for="appointment-message">Additional Details</label>
+      <textarea id="appointment-message" name="Additional Details"
+        rows="4" placeholder="Describe the problem with your car (optional)"></textarea>
+
+      <button class="button" type="submit">Submit Appointment ↗</button>
+
+      <small>Submitting this form sends an appointment request.
+      Your appointment is not confirmed until the shop contacts you.</small>
+    </form>
+  </div>
+</section>
